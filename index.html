@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Ipsum Generator</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section-center">
+      <h3>Choose your text generator</h3>
+
+      <!-- Lorem Ipsum Generator Section -->
+      <div class="lorem-section">
+        <h4>Generate Lorem Ipsum</h4>
+        <form class="lorem-form">
+          <label for="amount">Paragraphs:</label>
+          <input type="number" name="amount" id="amount" placeholder="5" min="1" />
+          
+          <!-- Dropdown for font selection -->
+          <label for="font">Font:</label>
+          <select id="font" name="font">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+          
+          <!-- Dropdown for font color selection -->
+          <label for="color">Font Color:</label>
+          <select id="color" name="color">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+          </select>
+
+          <!-- Dropdown for font size selection -->
+          <label for="size">Font Size:</label>
+          <select id="size" name="size">
+            <option value="14px">14px</option>
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+            <option value="20px">20px</option>
+            <option value="22px">22px</option>
+          </select>
+
+          <button type="submit" class="btn">Generate</button>
+        </form>
+
+        <article class="lorem-text"></article>
+      </div>
+
+      <!-- Custom Sentence Section -->
+      <div class="custom-section">
+        <h4>Create Your Own Sentence</h4>
+        <button class="custom-btn" onclick="toggleCustomForm()">Create Sentence</button>
+        <div id="custom-form" class="custom-form" style="display:none;">
+          <textarea id="custom-sentence" placeholder="Type your sentence here..."></textarea>
+          <button onclick="generateCustomSentence()">Generate Sentence</button>
+        </div>
+
+        <article class="custom-text"></article>
+      </div>
+
+      <button class="theme-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+    </section>
+
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
